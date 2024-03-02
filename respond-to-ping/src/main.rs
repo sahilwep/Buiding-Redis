@@ -1,3 +1,5 @@
+use std::net::TcpListener;
+
 fn main() {
-    println!("Hello, world!");
+    let _listener = TcpListener::bind("localhost:8080").unwrap();
 }
