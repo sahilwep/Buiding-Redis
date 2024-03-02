@@ -6,7 +6,9 @@ This repository is dedicated to my journey of building a Redis in Rust using the
 
 ## File Structure
 
-- All files are inside the directories.
+All files are inside the directories.
+  1. [bind-to-a-port](/bind-to-a-port/src/main.rs)
+  2. [respond-to-ping](/respond-to-ping/src/main.rs)
 
 ## Dependencies
 
