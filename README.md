@@ -1,5 +1,7 @@
 # Building Redis using Rust 
 
+I created this repository to monitor my personal development in building Redis using Rust on the CodeCrafters platform.
+
 ## Overview
 
 This repository is dedicated to my journey of building a Redis in Rust using the [CodeCrafters](https://app.codecrafters.io/catalog) platform. Redis is an in-memory data structure store that can be used as a database, cache, and message broker.
