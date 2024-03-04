@@ -11,6 +11,8 @@ This repository is dedicated to my journey of building a Redis in Rust using the
 All files are inside the directories.
   1. [bind-to-a-port](/bind-to-a-port/src/main.rs)
   2. [respond-to-ping](/respond-to-ping/src/main.rs)
+  2. [respond-to-multiple-ping](/respond-to-multiple-ping/src/main.rs)
+  2. [handle-concurrent-client](/handle-concurrent-client/src/main.rs)
 
 ## Dependencies
 
