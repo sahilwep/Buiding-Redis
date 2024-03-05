@@ -1,17 +1,6 @@
-/*
-Task: 
-In this stage, you'll add support for the ECHO command.
-ECHO is a command like PING that's used for testing and debugging. It accepts a single argument and returns it back as a RESP bulk string.
+# Code Description: 
 
-$ redis-cli ping # The command you implemented in previous stages
-PONG
-$ redis-cli echo hey # The command you'll implement in this stage
-hey
-
-
-*/
-
-
+```rust
 use tokio::{
     io::{AsyncReadExt, AsyncWriteExt},
     net::{TcpListener, TcpStream},
@@ -146,3 +135,27 @@ impl Display for Request {
         )
     }
 }
+```
+
+
+1. **Main Function (`main`):**
+   - Binds a TCP listener to the address "127.0.0.1:6379."
+   - Enters into a loop to accept incoming connections and spawns a new asynchronous task (`tokio::spawn`) to handle each connection.
+
+2. **Connection Handling (`handle_connection`):**
+   - Reads data from the incoming `TcpStream` and processes Redis-like commands.
+   - Parses the incoming message using the `parse` function.
+   - Calls `handle_request` to process the parsed request and sends the response back to the client.
+
+3. **Request Handling (`handle_request`):**
+   - Matches Redis-like commands and generates responses accordingly. It currently supports "PING" and "ECHO" commands.
+
+4. **Parsing (`parse`):**
+   - Parses Redis-like protocol, expecting an array of bulk strings.
+   - Extracts the command and arguments from the parsed data.
+
+5. **Request Structure (`Request`):**
+   - Represents a parsed Redis command, storing the command itself and its arguments.
+
+6. **Display Implementation (`Display` for `Request`):**
+   - Provides a human-readable representation of a `Request` for debugging purposes.
